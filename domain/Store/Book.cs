@@ -30,7 +30,7 @@ namespace Store
                  .Replace(" ", "")
                  .ToUpper();
 
-            return Regex.IsMatch(s, @"ISBN\d{10}");
+            return Regex.IsMatch(s, @"^ISBN\d{10}(\d{3})?$");
         }
     }
 }
