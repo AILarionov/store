@@ -7,14 +7,14 @@ namespace Store.Memory
     {
         private readonly Book[] books = new[]
       {
-        new Book(1,"ISBN 12323-23231", "D. Knuth", "Art of Programming"),
-        new Book(2, "ISBN 12323-23232", "M. Fowler", "Refrectoring"),
-        new Book(3, "ISBN 12323-23233", "B. Kernighan", "C Programming Language"),
+        new Book(1,"ISBN 123-233-230 1", "D. Knuth", "Art of Programming"),
+        new Book(2, "ISBN 123-233-230 2", "M. Fowler", "Refrectoring"),
+        new Book(3, "ISBN 123-233-230 3", "B. Kernighan", "C Programming Language"),
         };
 
         public Book[] GetAllByIsbn(string isbn)
         {
-            throw new NotImplementedException();
+            return books.Where(book => book.Isbn.Contains(isbn)).ToArray();
         }
 
         public Book[] GetAllByTitleorAuthor(string titlePart)

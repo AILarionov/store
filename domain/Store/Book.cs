@@ -5,6 +5,7 @@ namespace Store
 {
     public class Book
     {
+      
         public int Id { get; }
 
         public string Isbn { get; }
@@ -29,7 +30,7 @@ namespace Store
                  .Replace(" ", "")
                  .ToUpper();
 
-            return Regex.IsMatch(s,@"ISBN\d{10}");
+            return Regex.IsMatch(s, @"ISBN\d{10}");
         }
     }
 }
